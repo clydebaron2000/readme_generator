@@ -19,51 +19,60 @@ async function init() {
         type: 'editor',
         name: 'description',
         message: 'Describe what your project does.\nText format is the same as markdown.',
+        default: () => 'N/A\n\n\n',
         validate: (text) => (
             (text.length < 5) ? "Description must be longer than that!" : true)
     }, {
-        //     type: 'editor',
-        //     name: 'installation',
-        //     message: 'Give instructions on how to install a project.\nText format is the same as markdown.',
-        //     validate: (text) => (
-        //         (text.length < 10) ? "Description must be longer than that!" : true)
-        // }, {
-        //     type: 'editor',
-        //     name: 'usage',
-        //     message: 'Enter your usage information for this project.\nText format is the same as markdown.\nIf none, submit the word \'N/A\'.',
-        // }, {
-        //     type: 'editor',
-        //     name: 'contributions',
-        //     message: 'Enter your contribution guidelines for this project.\nText format is the same as markdown.\nIf none, submit the word \'N/A\'.',
-        // }, {
+        type: 'editor',
+        name: 'installation',
+        message: 'Give instructions on how to install a project.\nText format is the same as markdown.',
+        default: () => 'N/A\n\n\n\n\n\n\n\n\n',
+        validate: (text) => (
+            (text.length < 10) ? "Description must be longer than that!" : true)
+    }, {
+        type: 'editor',
+        name: 'usage',
+        message: 'Enter your usage information for this project.\nText format is the same as markdown.\nIf none, submit the word \'N/A\'.',
+        default: () => 'N/A'
+    }, {
+        type: 'editor',
+        name: 'contributions',
+        message: 'Enter your contribution guidelines for this project.\nText format is the same as markdown.\nIf none, submit the word \'N/A\'.',
+        default: () => 'N/A'
+    }, {
         type: 'list',
         name: 'license',
         message: 'What license do you want for your project?',
         choices: licenseChoices,
-        // }, {
-        //     type: 'input',
-        //     name: 'username',
-        //     message: 'What is your github username?\n',
-        //     validate: (text) => ((text.length < 4) ? "invalid username!" : true)
-        // }, {
-        //     type: 'input',
-        //     name: 'name',
-        //     message: 'What is your name?'\
-        //     n,
-        //     validate: (text) => ((text.length < 2) ? "invalid name!" : true)
-        // }, {
-        //     type: 'input',
-        //     name: 'email',
-        //     message: 'What is your email addres?\n',
-        //     default: () => 'example@provider.com',
-        //     validate: (text) => ((text.length < 4) ? "invalid email!" : true)
-    }];
+    }, {
+        type: 'input',
+        name: 'username',
+        message: 'What is your github username?\n',
+        validate: (text) => ((text.length < 4) ? "invalid username!" : true)
+    }, {
+        type: 'input',
+        name: 'name',
+        message: 'What is your name?\n',
+        validate: (text) => ((text.length < 2) ? "invalid name!" : true)
+    }, {
+        type: 'input',
+        name: 'email',
+        message: 'What is your email addres?\n',
+        default: () => 'example@provider.com',
+        validate: (text) => ((text.length < 4) ? "invalid email!" : true)
+    }, {
+        type: 'input',
+        name: 'fileName',
+        message: 'What file name do you want to save the markdown file to?\n(exclude \'.md\')\n',
+        default: () => 'test',
+        validate: (text) => ((text.length < 2) ? "invalid name!" : true)
+    }, ];
     try {
         const data = await inquirer.prompt(questions);
-        console.log(data);
+        // console.log(data);
         const content = await generateMarkdown(data);
-        console.log(content);
-        writeFileAsync('test.md', content);
+        // console.log(content);
+        writeFileAsync(`${data.fileName}.md`, content);
         console.log('success!');
     } catch (err) {
         console.log(err);
