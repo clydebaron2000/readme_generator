@@ -6,7 +6,7 @@ const escape = 'N/A';
 //contributions and usage are optional
 async function generateMarkdown(data) {
     const licenseJSON = JSON.parse(await readFileAsync('./JSON/licenses.json', 'utf8'));
-    let intro = `# ${data.title}\n\n## Description\n[![${data.license}](${licenseJSON[data.license].badge})](${licenseJSON[data.license].publicFile})\n${data.description}\n---\n## Table of Contents \n\n* [Installation](#Installation)\n* [Usage](#Usage)\n`;
+    let intro = `# ${data.title}\n\n## Description\n---\n[![${data.license}](${licenseJSON[data.license].badge})](${licenseJSON[data.license].publicFile})\n\n---\n## Table of Contents \n\n* [Installation](#Installation)\n* [Usage](#Usage)\n`;
     if (data.usage !== escape) intro += `* [Credits](#Credits)\n`;
     if (data.contributions !== escape) intro += `* [License](#License)\n`;
     intro += `* [Tests](#Tests)\n* [Questions?](#Questions?)\n\n---\n`;

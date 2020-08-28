@@ -42,7 +42,7 @@ async function init() {
         default: () => `Enter your contribution guidelines for this project.\n${editorSubmit}\nIf none, submit 'N/A'.`
     }, {
         type: 'editor',
-        name: 'test',
+        name: 'tests',
         message: 'Enter tests people can run for this project.\n',
         default: () => `Enter tests people can run for this project.\n${editorSubmit}\nIf none, submit 'N/A'.`
     }, {
@@ -66,7 +66,7 @@ async function init() {
     }, {
         type: 'input',
         name: 'email',
-        message: 'What is your email addres?\n',
+        message: 'What is your email address?\n',
         default: () => 'example@provider.com',
         validate: (text) => ((text.length < 4) ? "Invalid email! Try Again" : true)
     }, {
