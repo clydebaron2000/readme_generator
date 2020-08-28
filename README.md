@@ -6,6 +6,9 @@
 
 This project utilizes `node.js` and `npm` to create a readme generator within `gitbash`. After a series of prompts, the user will be able to choose the file name of the md file and will be notified of the success of the save of their new file.
 
+<img src='./Develop/img/demo.gif' alt='Gif Demo'>
+
+
 ---
 ## Table of Contents 
 
