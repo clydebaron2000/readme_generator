@@ -1,44 +1,54 @@
 # Title
 
 ## Description
-[![Apache-2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-
-
-N/A
-
-
-
+[![MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+Describe what your project does.
+Text will be formated the same as markdown.
+Save and exit the editor to submit your response.
 ---
 ## Table of Contents 
 
 * [Installation](#Installation)
 * [Usage](#Usage)
+* [Credits](#Credits)
+* [License](#License)
 * [Tests](#Tests)
 * [Questions?](#Questions?)
 
 ---
 ## Installation
 
-N/A
+Give instructions on how to install the project.
+Text will be formated the same as markdown.
+Save and exit the editor to submit your response.
 
+## Usage
 
-
-
-
-
-
-
-
+Enter your usage information for this project.
+Text will be formated the same as markdown.
+Save and exit the editor to submit your response.
+If none, submit 'N/A'.
 
 ## License
 
-This project uses [Apache-2.0](https://opensource.org/licenses/Apache-2.0).
+© 2020 [Clyde Baron Rapinan](https://github.com/clydebaron2000). Under the [MIT](https://opensource.org/licenses/MIT) license.
+
+
+
+## Contributing
+
+Enter your contribution guidelines for this project.
+Text will be formated the same as markdown.
+Save and exit the editor to submit your response.
+If none, submit 'N/A'.
 
 ## Tests
 
-
-{data.tests}
+undefined
 
 ## Questions?
 
 Have questions about my project? [Email me](mailto:example@provider.com) at example@provider.com.
+
+---
+Check out my other projects [here!](https://github.com/clydebaron2000)
