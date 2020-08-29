@@ -1,7 +1,7 @@
 # Readme Generator
 
 ## Description
----
+
 [![MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 This project utilizes `node.js` and `npm` to create a readme generator within `gitbash`. After a series of prompts, the user will be able to choose the file name of the md file and will be notified of the success of the save of their new file.
