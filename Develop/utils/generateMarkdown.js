@@ -12,7 +12,7 @@ async function generateMarkdown(data) {
     intro += `* [Tests](#Tests)\n* [Questions?](#Questions?)\n\n---\n`;
     let sections = `## Installation\n\n${data.installation}\n\n`;
     if (data.usage !== escape) sections += `## Usage\n\n${data.usage}\n\n`;
-    sections += `## License\n\n© 2020 [${data.name}](https://github.com/${data.username}). Under the [${data.license}](${licenseJSON[data.license].publicFile}) license.\n\n${licenseJSON[data.license].description}\n\n`
+    sections += `## License\n\n© 2020 [${data.name}](https://github.com/${data.username}). Under the [${data.license}](${licenseJSON[data.license].publicFile}) license.\\n\n`
     if (data.contributions !== escape) sections += `## Contributing\n\n${data.contributions}\n\n`;
     sections += `## Tests\n\n${data.tests}\n\n`;
     sections += `## Questions?\n\nHave questions about my project? [Email me](mailto:${data.email}) at ${data.email}.\n\n---\nCheck out my other projects [here!](https://github.com/${data.username})`;
